@@ -1,0 +1,238 @@
+@keyframes menssagem {
+  100% {
+    transform: translate(-50px, 0px);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+}
+body {
+  background-image:url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container{
+  height: auto;
+  width: 510px;
+  height: auto;
+  border-radius: 5px;
+}
+
+#elemento {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  border-radius: 7px;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+#elemento > span {
+  width: 100%;
+  height: 33.33%;
+  background-color: rgb(231, 231, 231);
+  position: relative;
+  padding: 7px;
+}
+
+#elemento > span:nth-child(1) {
+  border-radius: 10px 10px 0px 0px;
+}
+
+
+#elemento > span:nth-child(1) > input {
+  height: 10%;
+  width: 90%;
+  outline: none;
+  border-bottom: 1px solid rgb(36, 36, 36);
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 5px;
+  font-family: sans-serif;
+  color: rgb(35,11,100);
+}
+
+#elemento span:nth-child(1) button {
+  width: 8%;
+  height: 80%;
+  background-color: red;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 15px;
+}
+
+#elemento > span:nth-child(2) > button {
+  position: absolute;
+  font-size: 150%;
+  right: 7px;
+  height: 70%;
+  padding: 1%;
+  border-radius: 6px;
+  background-color: rgb(35, 11, 100);
+  color: rgb(255, 255, 255);
+  transition: 0.1s;
+}
+
+#elemento > span:nth-child(2) > label {
+  font-size: 1.3rem;
+  display: block;
+  font-family: sans-serif;
+  display: inline-block;
+}
+
+#elemento > span:nth-child(2) > input {
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+#elemento > span:nth-child(2) > button:active {
+  transform: scale(1.1);
+}
+
+#elemento > span:nth-child(2) > button:hover {
+  background-color: rgb(102, 70, 184);
+}
+
+#elemento > span:nth-child(4) {
+  border-radius: 0px 0px 10px 10px;
+}
+
+
+#adicionarCaracter{
+  display: inline-block;
+  font-size: 1em;
+  transform: translateY(-3px);
+  width: 268px;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+#adicionarCaracter:focus{
+  border-right: 1px solid black;
+  
+}
+
+#number{
+  color: rgb(35, 11, 100);
+  font-weight: 600;
+}
+
+#add{
+  font-size: 1.3em;
+}
+
+ label{
+  font-family: sans-serif;
+  color: rgb(35, 11, 100);
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.button1,
+.button2 {
+  background-color: rgb(255, 255, 255);
+  color: rgb(35,11,100);
+  font-size: 150%;
+  padding: 5px;
+  border-radius: 6px;
+  width: 35px;
+}
+
+.button2:active,
+.button1:active {
+  background-color: gray;
+  transform: scale(0.7);
+  transition: 0.3s;
+}
+
+.button2:hover,
+.button1:hover {
+  background-color: rgba(172, 172, 172, 0.507);
+}
+
+
+.copy {
+  transition: 0.3s;
+}
+
+.copy {
+  border-radius: 5px;
+}
+
+.copy:active {
+  transform: scale(1.1);
+}
+
+.menssageCopiada {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(58, 180, 58);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  display: none;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.caracteres{
+  font-family: sans-serif;
+  color: rgb(35, 11, 100);
+  display: inline-block;
+  margin:0px 10px 10px 0px;
+  font-size: 1.3em;
+}
+
+
+input[type="checkbox"]{
+  transform: scale(1.2);
+  margin:0px 5px 0px 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.efect{
+  width: 150%;
+  height: 50px;
+  background-color: rgb(3, 247, 255);
+  position: absolute;
+  top: 30%;
+  z-index: -1;
+  animation-name: spin;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

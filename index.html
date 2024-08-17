@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main id="container">
+      <div id="elemento">
+        <span>
+          <div class="menssageCopiada">Senha copiada com sucesso</div>
+          <input type="text" name="texto" id="input" value=""/>
+          <button onclick="copiarSenha()" class="copy"><img src="icon.png" alt="" /></button>
+        </span>
+        <span>
+          <button onclick="run()">GERAR</button>
+          <label for="number">TAMANHO DA SENHA</label>
+          <input type="number" name="numero" id="number" min="1" max="100" value="1" readonly
+          />
+          <span>
+            <button class="button1" onclick="alterar('+1')">+</button>
+            <button class="button2" onclick="alterar('-1')">-</button>
+          </span>
+        </span>
+        <span class="center"><label class="caracteres">CARACTERES UTILIZADOS</label></span>
+        <span class="center">
+          <input type="checkbox" name="letras maiusculas" id="letraMaiuscula">
+          <label for="letraMaiuscula">ABC</label>
+          <input type="checkbox" name="letras maiusculas" id="letraMinuscula">
+          <label for="letraMinuscula">abc</label>
+          <input type="checkbox" name="letras maiusculas" id="numeros">
+          <label for="numeros">123</label>
+          <input type="checkbox" name="letras maiusculas" id="simbolos">
+          <label for="simbolos">@#&</label>
+        </span>
+        <div class="efect"></div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
